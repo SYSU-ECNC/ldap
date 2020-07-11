@@ -60,6 +60,6 @@ http://ealeofile.ealeo.xyz/f/af33d990121b4649a436/?dl=1
 ```
 6、重启服务
 ```
-/etc/init.d/apache2 stop
+/etc/init.d/apache2 restart
 ```
 
