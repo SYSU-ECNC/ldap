@@ -10,7 +10,7 @@
 sudo apt-get install -y slapd ldap-utils
 ```
 
-2、配置/etc/ldap/ldap.conf, 添加BASE 和 URI. 这里的BASE为dc=ldapdomain,dc=com  URI为ldap://\<ip>:389
+2、配置/etc/ldap/ldap.conf, 添加BASE 和 URI. 这里的BASE为dc=ecnc,dc=com  URI为ldap://\<ip>:389
 
 ```
 BASE     dc=ecnc,dc=com
