@@ -8,7 +8,6 @@
 
 ```
 sudo apt-get install -y slapd ldap-utils
-
 ```
 
 2、配置/etc/ldap/ldap.conf, 添加BASE 和 URI. 这里的BASE为dc=ldapdomain,dc=com  URI为ldap://\<ip>:389
@@ -16,7 +15,6 @@ sudo apt-get install -y slapd ldap-utils
 ```
 BASE     dc=ldapdomain,dc=com
 URI      ldap://<ip>:389
-
 ```
 
 
@@ -24,7 +22,6 @@ URI      ldap://<ip>:389
 
 ```
 dpkg-reconfigure slapd
-
 ```
 
 
@@ -32,7 +29,6 @@ dpkg-reconfigure slapd
 
 ```
 apt-get install -y phpldapadmin
-
 ```
 
 修改相应的配置文件/etc/phpldapadmin/config.php，做如下修改：
@@ -45,7 +41,6 @@ apt-get install -y phpldapadmin
 (3) $servers->setValue('login', 'bind_id', 'cn=admin,dc=example,dc=com')#修改为baseDN下的admin, cn=admin,dc=ldapdomain,dc=com
 
 (4) $config->custom->appearance['hide_template_warning'] = false #false修改为true
-
 ```
 
 4、防火墙放行
@@ -54,7 +49,6 @@ apt-get install -y phpldapadmin
 ufw allow "Apache"
 ufw allow "Apache Full"
 ufw allow "Apache Secure" 
-
 ```
 
 5、替换/usr/share/phpldapadmin/lib/functions.php
@@ -63,7 +57,6 @@ ufw allow "Apache Secure"
 # 因为php7.2不支持create_function()
 下载链接：
 http://ealeofile.ealeo.xyz/f/af33d990121b4649a436/?dl=1
-
 ```
 
 
